@@ -166,10 +166,12 @@ fn main() {
     let results = collect_adrs();
     let mut stacks: Stacks = Default::default();
     for adr in results {
-        // println!("{}", adr);
         for event in adr.events {
             let stack = stacks.0.entry(event.stack).or_default();
             let category = stack.0.entry(event.category).or_default();
+            category.default.remove(&event.tech);
+            category.trial.remove(&event.tech);
+            category.retire.remove(&event.tech);
             match event.action {
                 Action::Default => category.default.insert(event.tech),
                 Action::Trial => category.trial.insert(event.tech),
