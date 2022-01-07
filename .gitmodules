@@ -1,0 +1,3 @@
+[submodule "ADRs"]
+	path = ADRs
+	url = git@github.com:lifecheq/ADRs.git
