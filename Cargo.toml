@@ -8,6 +8,6 @@ edition = "2021"
 [dependencies]
 comfy-table = "5.0.0"
 lazy_static = "1.4.0"
-regex = "1.5.4"
+regex = "1.5.5"
 serde = "1.0.133"
 serde_yaml = "0.8.23"
